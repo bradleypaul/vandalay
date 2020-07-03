@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Maintenance Tracker</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="body">
+
+    <div>
+        <header class="">
+            <div class="invisible"></div>
+            <div class="header-text text-center navbar-nav">
+                <h1>Vandelay Education Software Developer Challenge</h1>
+            </div>
+        </header>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="saved-queries" class="col-4">
+                <h4>Saved Queries</h4>
+                <ul>
+                    <li>Query Name</li>
+                    <li>Query Name</li>
+                    <li>Query Name</li>
+                    <li>Query Name</li>
+                    <li>Query Name</li>
+                </ul>
+            </aside>
+            <main class="main col-8">
+                <h4>
+                    <input id="query-name" type="text" placeholder="Query Name" />
+                    <button id="new">+ New</button>
+                </h4>
+                <textarea placeholder="SQL code" id="query"></textarea>
+                <button id="save-query">
+                    Save and execute
+                </button>
+                <section>
+                    <h4>Results</h4>
+                    <textarea id="results">Beans</textarea>
+                </section>
+                {{!-- {{{ body }}} --}}
+            </main>
+
+
+        </div>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
