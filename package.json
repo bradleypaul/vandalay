@@ -1,0 +1,24 @@
+{
+  "name": "vandalay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradleypaul/vandalay.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bradleypaul/vandalay/issues"
+  },
+  "homepage": "https://github.com/bradleypaul/vandalay#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.2.4",
+    "sqlite3": "^5.0.0"
+  }
+}
