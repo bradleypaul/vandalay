@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
     // if(req.session.loggedIn) {
     //     res.render('homepage');
     // } else {
-        console.log('hit!')
         res.render('homepage');
     // }
 });
