@@ -3,53 +3,87 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: white;
-}
-
-
-table, th, td {
-    border: 1px solid black;
-    padding: 7px;
-    margin-bottom: 15px;
-    text-align: center;
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
 }
 
 header {
-    display: block;
-    background: rgb(187, 64, 64);
-    text-align: center;
-    color: black;
-    padding: 0 1%;
-    margin-bottom: 15px;
-    font-variant: small-caps;
-    height: auto;
-    text-align: center;
+    padding: 20px 35px;
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
 }
 
-.invisible {
-    width: 192px;
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.header-text {
-    margin: auto;
-    text-align: center;
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    color: black;
+    list-style: none;
 }
 
-.header1 {
-    color: black;
+header nav ul li a {
+    margin: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw; 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+}  
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgb(187, 64, 64);
+    color: black;
+    font-variant: small-caps;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100;
+    left: 0;
+    bottom: 0;
+  }
 
 
 button {
     background-color: rgb(187, 64, 64);
-}
-
-h1 {
-    font-size: 4vw !important;
 }
 
 h3 {

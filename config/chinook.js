@@ -4,7 +4,7 @@ const chinook =  new sqlite3.Database('chinook.db', (err) => {
     if(err) {
         console.log(err)
     }
-    console.log('connected')
+    console.log('connected');
 });
 
 module.exports = chinook;

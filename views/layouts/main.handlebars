@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Maintenance Tracker</title>
+    <title>Vandalay</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,17 +13,20 @@
 
 <body class="body">
 
-    <div>
-        <header class="">
-            <div class="invisible"></div>
-            <div class="header-text text-center navbar-nav">
-                <h1>Vandelay Education Software Developer Challenge</h1>
-            </div>
-        </header>
+    <header>
+        <h1>Vandalay</h1>
+        <nav>
+            {{#if loggedIn}}
+            <ul class="nav-links">
+                <li><a href="/logout" class="logout"><button class="btn btn-outline-light">Logout</button></a></li>
+            </ul>
+            {{/if}}
+        </nav>
+    </header>
     </div>
     <div class="container-fluid">
-        <div class="row">          
-                {{{ body }}} 
+        <div class="row">
+            {{{ body }}}
         </div>
     </div>
 

@@ -1,4 +1,3 @@
-
 document.querySelector('#save-query').addEventListener('click', async (e) => {
     const query = document.querySelector('#query').value;
     const name = document.querySelector('#query-name').value;
@@ -13,14 +12,34 @@ document.querySelector('#save-query').addEventListener('click', async (e) => {
         });
 
         if (response.ok) {
-            // renderList();
+
             const res = await response.json();
             document.querySelector('#results').value = JSON.stringify(res);
+            // add query name to the query list
         }
     }
 });
+
+function appendListItem(name, list) {
+    const node = document.createElement('li')
+    node.append(name);
+    list.append(node)
+}
+
+async function renderList() {
+    const response = await fetch('/api/query');
+    if (response.ok) {
+        const queries = await response.json();
+        const list = document.querySelector("#query-list")
+        const queryNodes = queries.forEach(query => {
+            appendListItem(query.name, list)
+        });
+    }
+}
 
 document.querySelector('#new').addEventListener('click', (e) => {
     document.querySelector('#query').value = "";
     document.querySelector('#query-name').value = "";
 });
+
+document.addEventListener("DOMContentLoaded", renderList);
