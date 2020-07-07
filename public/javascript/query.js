@@ -15,13 +15,15 @@ document.querySelector('#save-query').addEventListener('click', async (e) => {
 
             const res = await response.json();
             document.querySelector('#results').value = JSON.stringify(res);
-            // add query name to the query list
+
+            const list = document.querySelector("#query-list");
+            appendListItem(name, list);
         }
     }
 });
 
 function appendListItem(name, list) {
-    const node = document.createElement('li')
+    const node = document.createElement('option')
     node.append(name);
     list.append(node)
 }
@@ -30,7 +32,7 @@ async function renderList() {
     const response = await fetch('/api/query');
     if (response.ok) {
         const queries = await response.json();
-        const list = document.querySelector("#query-list")
+        const list = document.querySelector("#query-list");
         const queryNodes = queries.forEach(query => {
             appendListItem(query.name, list)
         });

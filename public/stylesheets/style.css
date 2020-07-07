@@ -80,7 +80,9 @@ footer {
     left: 0;
     bottom: 0;
   }
-
+  textarea {
+    resize: none;
+  }
 
 button {
     background-color: rgb(187, 64, 64);
@@ -95,6 +97,14 @@ h5 {
     /* color: black; */
 }
 
+div.button {
+    margin: 10px;
+}
+
+textarea.flat {
+    border: none;
+    background-color: lightgray;
+}
 
 form {
     margin: 5px 0 5px 0;
@@ -140,14 +150,6 @@ ul li a {
     justify-content: center;
     margin: 15px auto;
     border: 1px solid aqua;
-}
-
-.login-form {
-    float: left
-}
-
-.signup-form {
-    float: right;
 }
 
 form h5 {

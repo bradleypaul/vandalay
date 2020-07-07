@@ -1,22 +1,37 @@
-<div class="container-welcome">
+<div class="container-fluid">
+    <div class="row">
+        
+        {{!-- redo this page with flexbox --}}
+        <main class="main col">
+            <aside id="saved-queries ">
+            <h4>Saved Queries</h4>
+            <select id="query-list" class="form-control">
+                <option value="none" selected disabled hidden>
+                    Select a query
+                </option>
+            </select>
+        </aside>
+            <div>
+                <label for="query-name">Query Name</label>
+                <input id="query-name" type="text" class="form-control" />
+                <div class="button">
+                    <button class="btn btn-primary" id="new">+ New Query</button>
+                </div>
+            </div>
+            <div>
+                <label for="query">SQL Query</label>
+                <textarea id="query" class="form-control"></textarea>
+                <div class="button">
+                    <button class="btn btn-primary" id="save-query">
+                        Save and execute
+                    </button>
+                </div>
+            </div>
+            <section>
+                <label for="results">Results</label>
+                <textarea id="results" class="flat form-control" readonly></textarea>
+            </section>
+        </main>
+    </div>
 </div>
-<aside id="saved-queries" class="col-4">
-    <h4>Saved Queries</h4>
-    <ul id="query-list">
-    </ul>
-</aside>
-<main class="main col-8">
-    <h4>
-        <input id="query-name" type="text" placeholder="Query Name" />
-        <button id="new">+ New</button>
-    </h4>
-    <textarea placeholder="SQL code" id="query"></textarea>
-    <button id="save-query">
-        Save and execute
-    </button>
-    <section>
-        <h4>Results</h4>
-        <textarea id="results">Beans</textarea>
-    </section>
-</main>
 <script src="/javascript/query.js"></script>
